@@ -466,4 +466,8 @@ button {
     #config-menu.open-height {
         height: 315px;
     }
+
+    #game-over {
+        gap: 50px;
+    }
 }
