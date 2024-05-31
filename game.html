@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no, maximum-scale=1.0, shrink-to-fit=no">
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+        <link rel="stylesheet" href="src/css/style.css">
+        <script src="https://kit.fontawesome.com/845ff96034.js" crossorigin="anonymous"></script>
+        <script src="src/js/prevent-elements.js"></script>
+        <title>Mata Mosquito</title>
+    </head>
+    <body>
+
+        <div id="container" class="blur">
+            <section id="main-menu" class="">
+                <div id="logo-main-menu">
+                    <img class="logo" src="src/img/game.png" alt="Mata Mosquito">
+                </div>
+                <div id="main-menu-options" class="menu-options">
+                    <button type="button" id="play" class="btn btn-white">Jogar</button>
+                    <button type="button" id="config" class="btn btn-black">Configurações</button>
+                </div>
+
+                <div id="config-menu" class="disabled">
+                    <button type="button" id="btn-close">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                    <ul id="difficult-items">
+                        <li class="difficult-item">
+                            <button type="button" class="difficulty-type">Fácil</button>
+                        </li>
+                        <li class="difficult-item">
+                            <button type="button" class="difficulty-type">Normal</button>
+                        </li>
+                        <li class="difficult-item">
+                            <button type="button" class="difficulty-type">Difícil</button>
+                        </li>
+                        <li class="difficult-item">
+                            <button type="button" class="difficulty-type">Extremo</button>
+                        </li>
+                    </ul>
+                    <h2 id="personal-record">
+                        <i class="fa-solid fa-trophy"></i>
+                        Recorde: <span id="best-record">0</span>
+                    </h2>
+                </div>
+
+                <div id="alert-modal" class="disabled">
+                    <div id="alert">
+                        <p>Escolha a dificuldade em "CONFIGURAÇÕES" antes de iniciar o jogo</p>
+                        <button type="button" id="close-alert">Ok</button>
+                    </div>
+                </div>
+
+                <div id="type-game" class="hidden disabled">
+                    <button type="button" class="btn-type-game">
+                        <i class="fa-solid fa-stopwatch fa-2x"></i>
+                        <p>Contra o Tempo</p>
+                    </button>
+                    <button type="button" class="btn-type-game">
+                        <i class="fa-solid fa-skull-crossbones fa-2x"></i>
+                        <p>Sobrevivência</p>
+                    </button>
+                </div>
+            </section>
+
+            <section id="gameplay" class="disabled">
+                <div id="painel-top">
+                    <div id="lifes">
+                        <i id="life-1" class="fa-solid fa-heart"></i>
+                        <i id="life-2" class="fa-solid fa-heart"></i>
+                        <i id="life-3" class="fa-solid fa-heart"></i>
+                    </div>
+                    <div id="timer">
+                        <i id="time-icon"></i>
+                        <span id="time"></span>
+                    </div>
+                    <p id="score">0</p>
+                </div>
+                <div id="game-area"></div>
+                <div id="painel-bottom">
+                    <div id="kills">
+                        <img id="mosquito-kills" src="src/img/mosquito.png" alt="Mosquitos Mortos">
+                        <p> = <span id="dead-mosquito-count">0</span> </p>
+                    </div>
+                    <p id="difficult-name"></p>
+                    <p id="multiply">1X</p>
+                </div>
+            </section>
+
+            <section id="game-over" class="disabled">
+                <h1 id="game-over-title">GAME OVER</h1>
+                <ul id="game-over-infos">
+                    <li class="game-over-info">
+                        <span>Mosquitos mortos:</span>
+                        <span id="total-mosquito-dead"></span>
+                    </li>
+                    <li class="game-over-info">
+                        <span>Pontuação:</span>
+                        <span id="total-score"></span>
+                    </li>
+                    <li class="game-over-info">
+                        <span>Dificuldade:</span>
+                        <span id="difficult-game"></span>
+                    </li>
+                </ul>
+                <div id="game-over-options" class="menu-options">
+                    <button type="button" id="restart" class="btn-transparent">Menu Principal</button>
+                </div>
+            </section>
+        </div>
+        
+        <script src="src/js/game.js"></script>
+
+    </body>
+</html>
